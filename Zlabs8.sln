@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zlabs8", "Zlabs8.csproj", "{AE631E53-FA1D-4622-9FFD-DF7E44A5B361}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE631E53-FA1D-4622-9FFD-DF7E44A5B361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE631E53-FA1D-4622-9FFD-DF7E44A5B361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE631E53-FA1D-4622-9FFD-DF7E44A5B361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE631E53-FA1D-4622-9FFD-DF7E44A5B361}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D013AA2E-3B4D-41CF-9D68-1F76686CDE47}
+	EndGlobalSection
+EndGlobal
