@@ -16,14 +16,14 @@ using Zlabs8.ViewModels;
 namespace Zlabs8.Views
 {
     /// <summary>
-    /// Логика взаимодействия для Lab5View.xaml
+    /// Логика взаимодействия для Lab8View.xaml
     /// </summary>
-    public partial class Lab5View : Window
+    public partial class Lab8View : Window
     {
-        public Lab5View()
+        public Lab8View()
         {
             InitializeComponent();
-            DataContext = new Lab5ViewModel();
+            DataContext = new Lab8ViewModel();
         }
     }
 }

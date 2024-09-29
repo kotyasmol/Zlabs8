@@ -26,18 +26,18 @@ namespace Zlabs8.ViewModels
             OpenLab3Command = new RelayCommand(OpenLab3);
             OpenLab4Command = new RelayCommand(OpenLab4);
             OpenLab5Command = new RelayCommand(OpenLab5);
-            /*OpenLab6Command = new RelayCommand(OpenLab6);
+            OpenLab6Command = new RelayCommand(OpenLab6);
             OpenLab7Command = new RelayCommand(OpenLab7);
-            OpenLab8Command = new RelayCommand(OpenLab8);*/
+            OpenLab8Command = new RelayCommand(OpenLab8);
         }
 
         private void OpenLab2() => OpenWindow(new Lab2View());
         private void OpenLab3() => OpenWindow(new Lab3View());
         private void OpenLab4() => OpenWindow(new Lab4View());
         private void OpenLab5() => OpenWindow(new Lab5View());
-        /*private void OpenLab6() => OpenWindow(new Lab6View());
+        private void OpenLab6() => OpenWindow(new Lab6View());
         private void OpenLab7() => OpenWindow(new Lab7View());
-        private void OpenLab8() => OpenWindow(new Lab8View());*/
+        private void OpenLab8() => OpenWindow(new Lab8View());
 
         private void OpenWindow(Window labWindow)
         {

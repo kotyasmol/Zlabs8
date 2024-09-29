@@ -1,12 +1,45 @@
 ﻿<Window x:Class="Zlabs8.Views.Lab5View"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Zlabs8.Views"
-        mc:Ignorable="d"
-        Title="Lab5View" Height="450" Width="800">
-    <Grid>
-        
+        Title="Лабораторная работа 5: Коррекция ошибок" Height="400" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" Margin="0,0,0,10">
+            Реализовать коррекцию ошибки в двоичной кодовой <LineBreak/>, используя метод Хэмминга (7,4)
+        </TextBlock>
+
+        <!-- Поле ввода двоичных данных -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Входные данные (4 бита):" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox Width="100" Text="{Binding InputBinary}" />
+            <Button Content="Закодировать" Command="{Binding EncodeCommand}" Width="100" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- Поле вывода закодированных данных -->
+        <TextBlock Grid.Row="2" Text="Закодированные данные:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Margin="0,5,0,0" Text="{Binding EncodedBinary}" IsReadOnly="True"/>
+
+        <!-- Поле ввода закодированных данных -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Полученные данные (7 бит):" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox Width="100" Text="{Binding EncodedBinary}" />
+            <Button Content="Декодировать" Command="{Binding DecodeCommand}" Width="100" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- Поле вывода декодированных данных -->
+        <TextBlock Grid.Row="4" Text="Декодированные данные:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Margin="0,5,0,0" Text="{Binding DecodedBinary}" IsReadOnly="True"/>
+
+        <!-- Поле вывода сообщений статуса -->
+        <TextBlock Grid.Row="5" Text="{Binding StatusMessage}" Foreground="Red" Margin="0,10,0,0"/>
     </Grid>
 </Window>

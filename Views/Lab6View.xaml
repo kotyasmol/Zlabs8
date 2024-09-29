@@ -1,0 +1,37 @@
+﻿<Window x:Class="Zlabs8.Views.Lab6View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Лабораторная работа 6: Сжатие файла" Height="400" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" Margin="0,0,0,10">
+            Выполнить первое сжатие файла, используя алгоритм Хаффмана,<LineBreak/> и повторное способом кодирования серий (RLE).
+        </TextBlock>
+
+        <!-- Поле выбора файла -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Файл:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox Width="200" Text="{Binding SelectedFilePath}" IsReadOnly="True"/>
+            <Button Content="Выбрать" Command="{Binding SelectFileCommand}" Width="75" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- Кнопка сжатия -->
+        <Button Grid.Row="2" Content="Сжать" Command="{Binding CompressCommand}" Width="100" Height="30" 
+                HorizontalAlignment="Left" />
+
+        <!-- Поле для отображения сжатых данных -->
+        <TextBlock Grid.Row="3" Text="Сжатые данные:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Margin="0,5,0,0" Text="{Binding CompressedData}" IsReadOnly="True" Height="100"/>
+
+        <!-- Поле для отображения статуса -->
+        <TextBlock Grid.Row="4" Text="{Binding StatusMessage}" Foreground="Green" Margin="0,10,0,0"/>
+    </Grid>
+</Window>
